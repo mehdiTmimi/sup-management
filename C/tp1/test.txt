@@ -1,0 +1,17 @@
+Titre: algorithme de multiplication
+
+Variables:
+    entier nbr1;
+    entier nbr2;
+    entier resultat;
+
+Debut:
+    afficher("veuillez saisir un nombre: ");
+    lire(nbr1);
+    afficher("veuillez saisir un autre nombre: ");
+    lire(nbr2);
+
+    resultat <- nbr1 * nbr2;
+
+    afficher(resultat);
+Fin
