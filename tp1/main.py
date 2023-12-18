@@ -24,10 +24,16 @@ def ajouterAnimal():
     type = input("veuillez choisir le type (Elephant:0,Tigre:1)")
     race = input("donner la race")
     poids = input("donner le poids")
-    if type == "0":
-        zoo["animaux"].append(Elephant(race,poids))
-    else:
-        zoo["animaux"].append(Tigre(race,poids))
+    try:
+        if poids.isnumeric()==False:
+            raise Exception("the weight must be a numeric value")
+        if type == "0":
+            zoo["animaux"].append(Elephant(race,poids))
+        else:
+            zoo["animaux"].append(Tigre(race,poids))
+    except Exception as e:
+        print(str(e))
+    
 def crieAnimaux():
     for animal in zoo["animaux"]:
         animal.crier()
